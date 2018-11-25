@@ -1,4 +1,4 @@
-package com.af.plainnotes;
+package com.af.simplenotes;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
+
+import com.af.plainnotes.R;
 
 public class NotesCursorAdapter extends CursorAdapter {
 

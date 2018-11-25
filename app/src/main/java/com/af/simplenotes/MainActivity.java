@@ -1,4 +1,4 @@
-package com.af.plainnotes;
+package com.af.simplenotes;
 
 import android.app.AlertDialog;
 import android.app.LoaderManager;
@@ -24,6 +24,7 @@ import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.af.plainnotes.R;
 import com.github.fabtransitionactivity.SheetLayout;
 
 import butterknife.BindView;
@@ -96,12 +97,12 @@ public class MainActivity extends AppCompatActivity
                 .show();
     }
 
-    private void insertSampleData() {
-        insertNote("Simple note");
-        insertNote("Multi-line\nnote");
-        insertNote("Ver long note with a lot of text that exceeds the width of the screen");
-        restartLoader();
-    }
+//    private void insertSampleData() {
+//        insertNote("Simple note");
+//        insertNote("Multi-line\nnote");
+//        insertNote("Ver long note with a lot of text that exceeds the width of the screen");
+//        restartLoader();
+//    }
 
     @OnClick(R.id.fab)
     void onFabClick() {
@@ -142,9 +143,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.action_create_sample:
-                insertSampleData();
-                break;
+//            case R.id.action_create_sample:
+//                insertSampleData();
+//                break;
             case R.id.action_delete_all:
                 deleteAllNotes();
                 break;

@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.af.simplenotes.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,14 +19,14 @@
         </activity>
 
         <provider
-            android:name=".NotesProvider"
+            android:name="com.af.simplenotes.NotesProvider"
             android:authorities="com.af.plainnotes.notesprovider"
             android:exported="false" />
 
         <activity
-            android:name=".EditorActivity"
+            android:name="com.af.simplenotes.EditorActivity"
             android:label="EditorActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="com.af.simplenotes.MainActivity">
 
         </activity>
     </application>

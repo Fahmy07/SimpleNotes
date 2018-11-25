@@ -1,4 +1,4 @@
-package com.af.plainnotes;
+package com.af.simplenotes;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.af.plainnotes.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,6 +39,7 @@ public class EditorActivity extends AppCompatActivity {
             setTitle(R.string.new_note);
         } else {
             mAction = Intent.ACTION_EDIT;
+            setTitle(R.string.edit_note);
             mNoteFilter = DBOpenHelper.COLUMN_NOTE_ID + "=" + uri.getLastPathSegment();
 
             Cursor cursor = getContentResolver().query(uri, DBOpenHelper.ALL_COLUMNS, mNoteFilter,

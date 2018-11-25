@@ -1,4 +1,4 @@
-package com.af.plainnotes;
+package com.af.simplenotes;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

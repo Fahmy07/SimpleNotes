@@ -19,39 +19,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/../../Courses/Android/Building a Note-Taking App for Android with David Gassner/Exercise Files/Assets/drawable/drawable-xxhdpi/ic_document.png" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/ic_document.png" />
+                                      <entry key="outputName" value="ic_document" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="ff9800" />
-                                    </map>
-                                  </option>
-                                </PersistentState>
-                              </value>
-                            </entry>
-                            <entry key="launcher">
-                              <value>
-                                <PersistentState>
-                                  <option name="children">
-                                    <map>
-                                      <entry key="foregroundImage">
-                                        <value>
-                                          <PersistentState>
-                                            <option name="values">
-                                              <map>
-                                                <entry key="scalingPercent" value="52" />
-                                              </map>
-                                            </option>
-                                          </PersistentState>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
-                                  <option name="values">
-                                    <map>
-                                      <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ff9800" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Desktop/note.png" />
-                                      <entry key="legacyIconShape" value="CIRCLE" />
-                                      <entry key="webIconShape" value="CIRCLE" />
+                                      <entry key="themeColor" value="512da8" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -70,11 +41,6 @@
                 </map>
               </option>
             </PersistentState>
-          </value>
-        </entry>
-        <entry key="vectorWizard">
-          <value>
-            <PersistentState />
           </value>
         </entry>
       </map>
