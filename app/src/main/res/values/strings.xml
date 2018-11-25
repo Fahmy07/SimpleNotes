@@ -11,4 +11,5 @@
     <string name="note_icon_description">Note</string>
     <string name="enter_note_here">Enter note here</string>
     <string name="edit_note">Edit note</string>
+    <string name="delete_note">DELETE NOTE</string>
 </resources>

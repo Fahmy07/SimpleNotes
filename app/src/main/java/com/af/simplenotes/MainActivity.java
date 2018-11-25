@@ -62,18 +62,44 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                DialogInterface.OnClickListener dialogClickListener =
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int button) {
+                                if (button == DialogInterface.BUTTON_POSITIVE) {
+
+                                    getContentResolver().delete(NotesProvider.CONTENT_URI, "_ID=" + id, null);
+                                    restartLoader();
+                                    Toast.makeText(MainActivity.this, getString(R.string.note_deleted), Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage(getString(R.string.are_you_sure))
+                        .setTitle(R.string.delete_note)
+                        .setPositiveButton(getString(android.R.string.yes), dialogClickListener)
+                        .setNegativeButton(getString(android.R.string.no), dialogClickListener)
+                        .show();
+                return true;
+            }
+        });
+
         getLoaderManager().initLoader(0, null, this);
 
         mSheetLayout.setFab(mFab);
         mSheetLayout.setFabAnimationEndListener(this);
     }
 
-    private void insertNote(String noteText) {
-        ContentValues values = new ContentValues();
-        values.put(DBOpenHelper.COLUMN_NOTE_TEXT, noteText);
-        Uri noteUri = getContentResolver().insert(NotesProvider.CONTENT_URI, values);
-        Log.d("MainActivity", "Inserted note " + noteUri.getLastPathSegment());
-    }
+//    private void insertNote(String noteText) {
+//        ContentValues values = new ContentValues();
+//        values.put(DBOpenHelper.COLUMN_NOTE_TEXT, noteText);
+//        Uri noteUri = getContentResolver().insert(NotesProvider.CONTENT_URI, values);
+//        Log.d("MainActivity", "Inserted note " + noteUri.getLastPathSegment());
+//    }
 
     private void deleteAllNotes() {
         DialogInterface.OnClickListener dialogClickListener =
@@ -81,7 +107,6 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onClick(DialogInterface dialog, int button) {
                         if (button == DialogInterface.BUTTON_POSITIVE) {
-                            //Insert Data management code here
 
                             getContentResolver().delete(NotesProvider.CONTENT_URI, null, null);
                             restartLoader();
