@@ -22,6 +22,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.af.plainnotes.R;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity
     @BindView(android.R.id.list) ListView mListView;
     @BindView(R.id.bottom_sheet) SheetLayout mSheetLayout;
     @BindView(R.id.fab) FloatingActionButton mFab;
+    @BindView(android.R.id.empty) TextView mEmptyTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity
         mCursorAdapter = new NotesCursorAdapter(this, null, 0);
 
         mListView.setAdapter(mCursorAdapter);
+
+        mListView.setEmptyView(mEmptyTextView);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

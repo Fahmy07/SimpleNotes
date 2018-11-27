@@ -12,4 +12,5 @@
     <string name="enter_note_here">Enter note here</string>
     <string name="edit_note">Edit note</string>
     <string name="delete_note">DELETE NOTE</string>
+    <string name="there_s_no_data_to_display">There\'s no data to display</string>
 </resources>
